@@ -65,87 +65,15 @@
 
 
             <div class="contacts_list">
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_1.jpg" width="50px" alt="">
+                <div class="container-list" v-for="contact in contacts" >
+                    <img class="img" :src="contact.avatar" width="50px" alt="">
                     <div class="display-left-none">
-                        <nav>Michele <br>
+                        <nav> {{contact.name}} <br>
                             <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
                         </nav>
                         <div class="hours">16:15</div>
                     </div>
                 </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_2.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Fabio <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">16:05</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_3.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Samuele <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">16:03</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_4.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Alessandro B. <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">15:50</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_5.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Alessandro L. <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">15:45</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_6.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Michela<br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">16:15</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_7.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Leonardo <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">16:15</div>
-                    </div>
-                </div>
-                <hr>
-                <div class="container-list">
-                    <img class="img" src="./assets/img/avatar_8.jpg" width="50px" alt="">
-                    <div class="display-left-none">
-                        <nav>Francesco <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
-                        </nav>
-                        <div class="hours">16:15</div>
-                    </div>
-                </div>
-
-
             </div>
             <!-- /.contacts_list -->
 
@@ -256,3 +184,5 @@
 </body>
 
 </html>
+
+
