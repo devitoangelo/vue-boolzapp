@@ -109,7 +109,7 @@
 
 
                 <div class="sent" v-for="contact in contacts">
-                    <div class="d-f" v-for="(message, index) in contact.messages">
+                    <div class="d-f" v-for="(message, index) in contact.messages" v-bind:="index">
                         <p>{{message.message}}</p>
 
                         
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <!-- /.sent -->
-                <div class="received" v-for="contact in contacts">
+                <div class="received" v-for="(contact, index) in contacts" :key="index">
                     <div class="d-f" v-for="message in contact.messages">
                     <p>{{message.message}}</p>
                         <nav>&#9662
