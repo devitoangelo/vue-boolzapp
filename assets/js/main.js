@@ -170,7 +170,22 @@ createApp({
       ]
     }
 
+  },
+  
+  methods: {
+
+    clickList() {
+
+      console.log(this.clickList);
+    }
+
+
+
   }
+
+
+
+
   
 
 }).mount('#app')

@@ -65,7 +65,7 @@
 
 
             <div class="contacts_list">
-                <div class="container-list" v-for="contact in contacts" >
+                <div class="container-list" v-for="contact in contacts" @click="clickList" >
                     <img class="img" :src="contact.avatar" width="50px" alt="">
                     <div class="display-left-none">
                         <nav> {{contact.name}} <br>
@@ -95,11 +95,6 @@
                         </li>
                     </ul>
                 </div>
-
-
-
-
-
 
 
 
@@ -135,7 +130,7 @@
                     </div>
                 </div>
                 <!-- /.sent -->
-                <div class="received" v-for="(contact, index) in contacts" :key="index">
+                <div class="received" v-for="contact in contacts">
                     <div class="d-f" v-for="message in contact.messages">
                     <p>{{message.message}}</p>
                         <nav>&#9662
