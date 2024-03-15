@@ -108,10 +108,13 @@
             <div class="chat">
 
 
-                <div class="sent">
-                    <div class="d-f">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt illo, quasi
-                        nihil dolores exercitationem nostrum labore provident praesentium veritatis id voluptate atque
-                        dolorum iste eius eaque repudiandae possimus sunt.
+                <div class="sent" v-for="contact in contacts">
+                    <div class="d-f" v-for="(message, index) in contact.messages">
+                        <p>{{message.message}}</p>
+
+                        
+
+        
 
                         <nav>&#9662
                             <div class="list-sent">
@@ -132,12 +135,9 @@
                     </div>
                 </div>
                 <!-- /.sent -->
-                <div class="received">
-                    <div class="d-f">
-
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium. Minima placeat
-                        ducimus nihil, iure neque accusantium modi accusamus optio vero saepe facilis ad consequatur
-                        consequuntur iusto facere? Accusamus, totam.
+                <div class="received" v-for="contact in contacts">
+                    <div class="d-f" v-for="message in contact.messages">
+                    <p>{{message.message}}</p>
                         <nav>&#9662
                             <div class="list-sent">
                                 <ul>
