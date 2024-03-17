@@ -3,7 +3,9 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-
+     
+      listActive: 0,
+   
 
       contacts: [
         {
@@ -52,7 +54,7 @@ createApp({
         },
         {
           name: 'Samuele',
-          avatar: './assets/img/avatar_3.jpg',  
+          avatar: './assets/img/avatar_3.jpg',
           visible: true,
           messages: [
             {
@@ -167,26 +169,38 @@ createApp({
             }
           ],
         }
-      ]
+      ],
+
+
+
     }
 
   },
-  
+
   methods: {
 
-    clickList() {
+    clickList(index) {
+      console.log("hello word");
 
-      console.log(this.clickList);
-    }
+    
+        this.listActive = index
+      
+      console.log(this.listActive);
+
+    },
+
+    contactSearch(index) {
 
 
+
+    },
 
   }
 
 
 
 
-  
+
 
 }).mount('#app')
 

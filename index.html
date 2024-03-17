@@ -55,7 +55,8 @@
                 <div class="container-search">
                     <nav id="c-gray" class="m-left"><i class="fa-solid fa-magnifying-glass"></i></nav>
                     <div class="p-l">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputText"
+                            @keyup.enter="contactSearch()" @keyup.delete="contactRestore()">
                     </div>
                 </div>
 
@@ -65,11 +66,11 @@
 
 
             <div class="contacts_list">
-                <div class="container-list" v-for="contact in contacts" @click="clickList" >
+                <div class="container-list" v-for="contact, index in contacts" @click="clickList(index)" :key="index">
                     <img class="img" :src="contact.avatar" width="50px" alt="">
                     <div class="display-left-none">
                         <nav> {{contact.name}} <br>
-                            <section id="c-gray" class="font">Lorem ipsum dolor sit amet</section>
+                            <section id="c-gray" class="font">Ultimo messaggio inviato</section>
                         </nav>
                         <div class="hours">16:15</div>
                     </div>
@@ -81,8 +82,8 @@
         <div class="right">
             <div class="contact_profile">
                 <div class="img-contact">
-                    <img class="img" src="./assets/img/avatar_1.jpg" width="50px" alt="">
-                    <nav class="p-10"> Michele <br>
+                    <img class="img" :src="contacts[listActive].avatar" width="50px" alt="">
+                    <nav class="p-10"> <span>{{contacts[listActive].name}}</span> <br>
                         <section id="c-gray">Ultimo accesso oggi alle 16:26</section>
                     </nav>
                 </div>
@@ -98,18 +99,16 @@
 
 
 
+
             </div>
             <!-- /.contact_profile -->
             <div class="chat">
 
 
-                <div class="sent" v-for="contact in contacts">
-                    <div class="d-f" v-for="(message, index) in contact.messages" v-bind:="index">
-                        <p>{{message.message}}</p>
+                <div class="sent" v-for="contact in contacts" :key="index">
+                    <div class="d-f" v-for="message in contact.messages">
+                        <p> {{message.message}}</p>
 
-                        
-
-        
 
                         <nav>&#9662
                             <div class="list-sent">
@@ -132,7 +131,7 @@
                 <!-- /.sent -->
                 <div class="received" v-for="contact in contacts">
                     <div class="d-f" v-for="message in contact.messages">
-                    <p>{{message.message}}</p>
+                        <p>{{message.message}}</p>
                         <nav>&#9662
                             <div class="list-sent">
                                 <ul>
@@ -163,7 +162,8 @@
                 <div class="container-prompt">
                     <section class="list"> <i class="fa-regular fa-face-smile"></i> </section>
                     <div class="text">
-                        <input class="ciao" type="text" placeholder="Scrivi un messaggio">
+                        <input class="ciao" type="text" placeholder="Scrivi un messaggio" v-model.trim="newTask"
+                            @keyup.enter="addTask()">
 
                     </div>
                     <section class="list"><i id="font-x-lg" class="fa-solid fa-microphone"></i> </section>
@@ -179,5 +179,3 @@
 </body>
 
 </html>
-
-
