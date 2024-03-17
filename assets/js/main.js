@@ -6,6 +6,8 @@ createApp({
 
       listActive: 0,
       sentMessage: 0,
+      newTask: "",
+
 
 
 
@@ -197,7 +199,12 @@ createApp({
 
     },
 
-  }
+    addTask() {
+
+      console.log(this.newTask);
+    }
+
+  },
 
 
 
