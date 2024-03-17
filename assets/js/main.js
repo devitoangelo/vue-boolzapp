@@ -7,6 +7,7 @@ createApp({
       listActive: 0,
       sentMessage: 0,
       newTask: "",
+      searchContact: "",
 
 
 
@@ -193,7 +194,8 @@ createApp({
 
     },
 
-    contactSearch(index) {
+    contactInput() {
+      console.log("ciao ciao");
 
 
 

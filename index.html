@@ -55,8 +55,8 @@
                 <div class="container-search">
                     <nav id="c-gray" class="m-left"><i class="fa-solid fa-magnifying-glass"></i></nav>
                     <div class="p-l">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputText"
-                            @keyup.enter="contactSearch()" @keyup.delete="contactRestore()">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact"
+                            @keyup.enter="contactInput()">
                     </div>
                 </div>
 
