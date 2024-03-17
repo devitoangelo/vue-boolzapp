@@ -3,9 +3,11 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-     
+
       listActive: 0,
-   
+      sentMessage: 0,
+
+
 
       contacts: [
         {
@@ -182,9 +184,9 @@ createApp({
     clickList(index) {
       console.log("hello word");
 
-    
-        this.listActive = index
-      
+
+      this.listActive = index
+
       console.log(this.listActive);
 
     },

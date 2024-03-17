@@ -105,9 +105,9 @@
             <div class="chat">
 
 
-                <div class="sent" v-for="contact in contacts" :key="index">
-                    <div class="d-f" v-for="message in contact.messages">
-                        <p> {{message.message}}</p>
+                <div class="sent" v-for="message in contacts[listActive].messages">
+                    <div class="d-f" v-for="message.status === `sent`">
+                        <p>{{message.message}}</p>
 
 
                         <nav>&#9662
@@ -129,8 +129,8 @@
                     </div>
                 </div>
                 <!-- /.sent -->
-                <div class="received" v-for="contact in contacts">
-                    <div class="d-f" v-for="message in contact.messages">
+                <div class="received"  v-for="message in contacts[listActive].messages">
+                    <div class="d-f" v-if="message.status === 'sent'">
                         <p>{{message.message}}</p>
                         <nav>&#9662
                             <div class="list-sent">

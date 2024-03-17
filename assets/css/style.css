@@ -145,7 +145,8 @@ body {
             padding: 2rem;
 
             &>div {
-                min-height: 140px;
+                min-height: 50px;
+                margin: 2px 0;
             }
 
             >.sent {
@@ -331,6 +332,7 @@ body {
 
     color: gray;
     font-size: smaller;
+
 }
 
 .display-left-none {
@@ -414,11 +416,11 @@ nav:hover li {
 }
 
 
-nav:hover .list-sent{
+nav:hover .list-sent {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .list-sent {

@@ -5,6 +5,8 @@
  - ● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
     nome e immagine di ogni contatto
      - aggiungere un ciclo v-for sul container-list in modo tale da ciclare tutti i contatti creati con un array di oggeti 
+
+     
  # Milestone 2
  - ● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
     messaggi relativi al contatto attivo all’interno del pannello della conversazione
