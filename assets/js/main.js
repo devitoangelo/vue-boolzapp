@@ -200,8 +200,19 @@ createApp({
     },
 
     addTask() {
-
       console.log(this.newTask);
+      if (this.newTask) {
+        this.contacts[this.listActive].messages.push({
+          date: "10/01/2020 16:15:22",
+          message: this.newTask,
+          status: 'received'
+        })
+
+
+      }
+
+
+
     }
 
   },
