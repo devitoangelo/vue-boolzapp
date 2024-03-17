@@ -207,6 +207,13 @@ createApp({
           message: this.newTask,
           status: 'received'
         })
+        setTimeout(() => {
+          this.contacts[this.listActive].messages.push({
+            date: "10/01/2020 16:15:22",
+            message: "ciao",
+            status: 'sent'
+          })
+        },2000)
 
 
       }
