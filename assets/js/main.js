@@ -195,7 +195,25 @@ createApp({
     },
 
     contactInput() {
-      console.log("ciao ciao");
+      console.log("Hello");
+
+      let text = this.searchContact.toLowerCase().trim()
+      // mette il testo in minusco ed eliminare eventuali spazi grazie a (.trim)
+      console.log(text);
+
+
+      this.contacts = this.contacts.filter(function (contact) {
+        //filtriamo all'interno di contacts e prendiamo solo il nome 
+        if (contact.name.toLowerCase().includes(text)) {
+          // uniamo quello di sopra con text (quello che scriviamo su serach)
+          return contact.name
+          
+        }
+
+      })
+
+
+
 
 
 
@@ -215,7 +233,7 @@ createApp({
             message: "ciao",
             status: 'sent'
           })
-        },2000)
+        }, 2000)
 
 
       }
