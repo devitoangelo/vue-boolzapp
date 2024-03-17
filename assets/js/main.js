@@ -9,9 +9,7 @@ createApp({
       newTask: "",
       searchContact: "",
 
-
-
-
+      
       contacts: [
         {
           name: 'Michele',
@@ -184,6 +182,8 @@ createApp({
 
   methods: {
 
+
+
     clickList(index) {
       console.log("hello word");
 
@@ -193,6 +193,7 @@ createApp({
       console.log(this.listActive);
 
     },
+
 
     contactInput() {
       console.log("Hello");
@@ -206,19 +207,19 @@ createApp({
         //filtriamo all'interno di contacts e prendiamo solo il nome 
         if (contact.name.toLowerCase().includes(text)) {
           // uniamo quello di sopra con text (quello che scriviamo su serach)
-          return contact.name
-          
+          return contact.name 
         }
-
       })
+    },
 
-
-
-
+    returnSearch() {    // incompleto
+      this.searchContact= ""
 
 
     },
 
+
+    // add task an setTimeout
     addTask() {
       console.log(this.newTask);
       if (this.newTask) {
@@ -238,15 +239,9 @@ createApp({
 
       }
 
-
-
     }
 
   },
-
-
-
-
 
 
 }).mount('#app')
